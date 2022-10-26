@@ -1,0 +1,36 @@
+body {
+  font-family: "Segoe UI, sans-serif";
+  padding-inline: 1rem;
+  background-image: url("./images/silverware.jpg");
+  background-repeat: repeat;
+}
+
+#header {
+  font-size: 1.75rem;
+  border: 1px solid green;
+  border-radius: 15px;
+  background-color: rgb(235, 233, 233);
+  color: rgb(107, 168, 15);
+  padding: 1.5rem 4rem;
+  margin-block: 1rem;
+  text-align: center;
+}
+
+#homepage > img {
+  border-radius: 45%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#home-break {
+  width: 1px;
+  height: 500px;
+  background-color: rgb(107, 168, 15);
+  display: inline-block;
+}
+
+@media screen and (max-width: 769px) {
+  #homepage > img {
+    width: 45%;
+  }
+}
