@@ -1,36 +1,105 @@
+:root {
+  --tablet-size: 769px;
+  --desktop-size: 1260px;
+}
+
 body {
   font-family: "Segoe UI, sans-serif";
   padding-inline: 1rem;
   background-image: url("./images/silverware.jpg");
   background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
 }
 
-#header {
+/* ////////////////////// */
+/* Home Page */
+/* ////////////////////// */
+
+.header {
   font-size: 1.75rem;
   border: 1px solid green;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: rgb(235, 233, 233);
   color: rgb(107, 168, 15);
   padding: 1.5rem 4rem;
   margin-block: 1rem;
   text-align: center;
+  width: 95%;
+  font-weight: 700;
 }
 
-#homepage > img {
+.subheader {
+  font-size: 1rem;
+  border: 1px solid green;
+  border-radius: 20px;
+  background-color: rgb(235, 233, 233);
+  color: rgb(107, 168, 15);
+  padding: 1rem 1rem;
+  margin-block: 1rem;
+  text-align: center;
+  width: 80%;
+  font-weight: 700;
+}
+
+a {
+  color: rgb(107, 168, 15);
+}
+
+#homepage > img,
+.image {
   border-radius: 45%;
   margin: 0 auto;
   width: 100%;
 }
 
-#home-break {
+.home-break {
   width: 1px;
   height: 500px;
   background-color: rgb(107, 168, 15);
   display: inline-block;
+  position: absolute;
 }
 
-@media screen and (max-width: 769px) {
+#first-break,
+#second-break {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
   #homepage > img {
-    width: 45%;
+    width: 48%;
   }
+
+  #first-break {
+    display: inline-flex;
+  }
+}
+
+/* ////////////////////// */
+/* Fish Page */
+/* ////////////////////// */
+
+ul > li {
+  list-style-image: url("./images/fish_icon_24.png");
+}
+
+input {
+  width: 100%;
+}
+
+blockquote {
+  background-color: rgb(247, 247, 150);
+  width: 80%;
+}
+
+.miniheader {
+  text-align: left;
+  width: 80%;
+  font-weight: 700;
 }
