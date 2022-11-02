@@ -1,10 +1,14 @@
 :root {
   --tablet-size: 769px;
   --desktop-size: 1260px;
+  --clr-text: #a4a400;
+  --clr-border: #73ad21;
+  --clr-bg: #f0f0f0;
+  --clr-highlight: #ffffa8;
 }
 
 body {
-  font-family: "Segoe UI, sans-serif";
+  font-family: "Segoe UI", Arial, sans-serif;
   padding-inline: 1rem;
   background-image: url("./images/silverware.jpg");
   background-repeat: repeat;
@@ -17,67 +21,48 @@ body {
   margin-bottom: 3rem;
 }
 
-/* ////////////////////// */
-/* Home Page */
-/* ////////////////////// */
-
 .header {
-  font-size: 1.75rem;
-  border: 1px solid green;
-  border-radius: 20px;
-  background-color: rgb(235, 233, 233);
-  color: rgb(107, 168, 15);
+  font-size: 1.5rem;
+  border: 2px solid var(--clr-border);
+  border-radius: 25px;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
   padding: 1.5rem 4rem;
-  margin-block: 1rem;
+  margin: 1rem auto;
   text-align: center;
   width: 95%;
+  max-width: 600px;
   font-weight: 700;
 }
 
 .subheader {
   font-size: 1rem;
-  border: 1px solid green;
-  border-radius: 20px;
-  background-color: rgb(235, 233, 233);
-  color: rgb(107, 168, 15);
   padding: 1rem 1rem;
-  margin-block: 1rem;
-  text-align: center;
-  width: 80%;
-  font-weight: 700;
+  width: 75%;
+  max-width: 400px;
 }
 
-a {
-  color: rgb(107, 168, 15);
-}
-
-#homepage > img,
-.image {
+.image_round {
   border-radius: 45%;
-  margin: 0 auto;
-  width: 100%;
+  margin: 0.5rem auto;
+  width: 425px;
 }
 
-.home-break {
-  width: 1px;
-  height: 500px;
-  background-color: rgb(107, 168, 15);
-  display: inline-block;
-  position: absolute;
-}
+/* ////////////////////// */
+/* Home Page */
+/* ////////////////////// */
 
-#first-break,
-#second-break {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  #homepage > img {
-    width: 48%;
+@media only screen and (min-width: 768px) {
+  #homepage_recipes {
+    column-count: 2;
+    column-rule: 2px solid var(--clr-text);
   }
+}
 
-  #first-break {
-    display: inline-flex;
+@media only screen and (min-width: 1024px) {
+  #homepage_recipes {
+    column-count: 3;
+    column-rule: 2px solid var(--clr-text);
   }
 }
 
@@ -94,7 +79,11 @@ input {
 }
 
 blockquote {
-  background-color: rgb(247, 247, 150);
+  background-color: var(--clr-highlight);
+  width: 80%;
+}
+
+fieldset {
   width: 80%;
 }
 
@@ -102,4 +91,74 @@ blockquote {
   text-align: left;
   width: 80%;
   font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  height: 3px;
+  background-color: var(--clr-bg);
+  border: none;
+}
+
+a {
+  color: var(--clr-text);
+}
+
+.signup_fieldset {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.signup_fieldset input[type="text"] {
+  width: 75%;
+}
+
+.signup_fieldset input[type="radio"] {
+  width: 2ch;
+}
+
+@media only screen and (min-width: 768px) {
+  #ingredients,
+  #method {
+    column-count: 2;
+    column-rule: 2px solid var(--clr-text);
+  }
+
+  #comments fieldset,
+  blockquote {
+    width: 400px;
+  }
+
+  hr {
+    width: 700px;
+  }
+
+  .signup_fieldset {
+    max-width: 250px;
+  }
+
+  #comments fieldset,
+  blockquote {
+    margin: 0 auto;
+  }
+
+  .miniheader {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #ingredients,
+  #method {
+    column-count: 3;
+    column-rule: 2px solid var(--clr-text);
+  }
+
+  hr {
+    width: 1024px;
+  }
+}
+
+div {
+  max-width: 1024px;
 }
